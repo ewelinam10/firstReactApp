@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+class MyList extends Component{
+  render(){
+    return (
+      <div>
+        <h1> {this.props.title}</h1>
+      </div>
+    )
+  }
+}
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> jedziemy !
+          Edit <code>src/App.js</code> My first component
         </p>
         <a
           className="App-link"
@@ -18,7 +26,13 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+          </header>       
+
+          <body>
+            <div>
+              <MyList title='Nowa lista'></MyList>
+            </div>
+          </body>
     </div>
   );
 }
