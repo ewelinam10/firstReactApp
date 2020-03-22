@@ -6,35 +6,33 @@ class MyList extends Component{
     return (
       <div>
         <h1> {this.props.title}</h1>
+        {this.props.tasks.map(task => 
+        <div><p> {task}</p></div>
+        )}
       </div>
     )
   }
 }
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> My first component
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-          </header>       
+class App extends Component {
+ myTasks = [
+   "Buy books",
+   "Buy nimni cream"
+ ]
+  render(){
+    return(
 
-          <body>
-            <div>
-              <MyList title='Nowa lista'></MyList>
-            </div>
-          </body>
-    </div>
-  );
+      <header className="App-header">
+      <img src={logo} className="App-logo" alt="logo" />
+      <p>
+      <div>
+            <MyList title='TODO' tasks={this.myTasks}></MyList>
+          </div>
+      </p>
+
+        </header> 
+    )
+        
+  }
 }
 
 export default App;
