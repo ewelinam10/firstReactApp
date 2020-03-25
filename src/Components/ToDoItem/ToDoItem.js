@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
+import styled from 'styled-components'
+
+const TaskName = styled.p`
+font-style : italic;
+`;
+
 var classNames = require('classnames');
+
 
 class ToDoItem extends Component{
     static defaultProps = {
@@ -23,7 +30,7 @@ class ToDoItem extends Component{
         
         <div className = {classes}>
         <p><input type="checkbox" onChange={this.changeStateOfTask}/></p>
-        <p> {text}</p>
+        <TaskName> {text}</TaskName>
         </div>
       )
     }

@@ -7,17 +7,27 @@ import ToDoList from './Conteners/ToDoList.js'
 class App extends Component {
 
   render(){
-    return(
+    return (
+      <div>
+        <body>
+          <div>
+            <img src={logo} className="App-logo" alt="logo" />
+          </div>
 
-      <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      
-      <p><div>
-            <ToDoList/>
-      </div></p>
+          <p>
+            <div>
+              <ToDoList />
+            </div>
+          </p>
+        </body>
 
-        </header> 
-    )
+        <footer>
+            Designed with the{" "}
+            <a href="https://www.vecteezy.com/">Vecteezy Editor</a>
+          </footer>
+          
+      </div>
+    );
         
   }
 }
