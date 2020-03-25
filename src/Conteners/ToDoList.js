@@ -35,8 +35,9 @@ const NewToDoForm = ({onChange,onSubmit,draft}) => (
 class ToDoList extends Component{
   static defaultProps = {
     tasks : [
-      {text:"Buy books"},
-      {text:"Buy nimni cream"}
+      {text:"Eat pizza"},
+      {text:"Watch hotel paradise"},
+      {text:"Hug"}
      ],
      title : 'TODO LIST'
   }
